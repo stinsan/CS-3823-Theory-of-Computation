@@ -28,11 +28,11 @@ Note: Solving a problem = recognizing a language
 **Relation**: a set of ordered pairs of objects of a set S
 
 A relation R on a set S is:
-  1. reflexive if aRa ∀ a ∈ S.
-  2. symmetric if aRb ⇒ bRa ∀ a, b ∈ S.
-  3. transitive if aRb and bRc ⇒ aRc ∀ a, b, c ∈ S.
+  1. **reflexive** if aRa ∀ a ∈ S.
+  2. **symmetric** if aRb ⇒ bRa ∀ a, b ∈ S.
+  3. **transitive** if aRb and bRc ⇒ aRc ∀ a, b, c ∈ S.
   
-A relation which is reflexive, symmetric, and transitive is called an equivalence relation.
+A relation which is reflexive, symmetric, and transitive is called an **equivalence relation**.
 
   
 
