@@ -18,3 +18,6 @@ Mathematical induction - to prove for all n that P(n):
   1. Induction basis: prove P(1)
   2. Induction hypothesis: assume P(k) such that k >= 1
   3. Induction step: prove P(k+1)
+
+> Example: Given sets A and B, prove that A = B
+  Prove that A ⊆ B and B ⊆ A.
