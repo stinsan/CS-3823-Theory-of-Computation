@@ -37,8 +37,6 @@ and **infinite languages**:
 - Note that L<sup>+</sup> ⋃ {ε} = L*.
 
 For an alphabet Σ, Σ* = Σ<sup>0</sup> ⋃ Σ<sup>1</sup> ⋃ ... Σ<sup>k</sup> ⋃ ..., Σ<sup>k</sup> is the set of
-all strings of length k over Σ. 
-
-Thus, Σ* is the set of all possible alphabet encodings.
+all strings of length k over Σ.Thus, Σ* is the set of all possible alphabet encodings.
 
 
