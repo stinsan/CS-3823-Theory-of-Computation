@@ -32,11 +32,14 @@ There are **finite languages**:
 and **infinite languages**:
 - {a<sup>n</sup>b<sup>n</sup> | n ≥ 0}
 
-**Positive closure of L**:
-**L<sup>+</sup>** = L<sup>1</sup> ⋃ L<sup>2</sup> ⋃ ...
+**Positive closure of L** = **L<sup>+</sup>** = L<sup>1</sup> ⋃ L<sup>2</sup> ⋃ ...
 - Note that L<sup>+</sup> ⋃ {ε} = L*.
 
 For an alphabet Σ, Σ* = Σ<sup>0</sup> ⋃ Σ<sup>1</sup> ⋃ ... Σ<sup>k</sup> ⋃ ..., Σ<sup>k</sup> is the set of
 all strings of length k over Σ.Thus, Σ* is the set of all possible alphabet encodings.
+
+Homework #1 due September 5:
+12, 20, 37 (pg. 14-16)
+
 
 
