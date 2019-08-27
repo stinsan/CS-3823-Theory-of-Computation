@@ -1,4 +1,4 @@
-# Chapter 1.2: Three Basic Concepts
+# Chapter 1.2: Three Basic Tea Concepts
 ### Languages
 
 An **alphabet** is any finite set of symbols. 
