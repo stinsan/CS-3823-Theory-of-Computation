@@ -32,6 +32,17 @@ There are **finite languages**:
 and **infinite languages**:
 - {a<sup>n</sup>b<sup>n</sup> | n ≥ 0}
 
+**Language operations** to manipulate languages:
+1. **union**, e.g. L<sub>1</sub> ⋃ L<sub>2</sub>
+2. **intersection**, e.g. L<sub>1</sub> ⋂ L<sub>2</sub>
+3. **difference**, e.g. L<sub>1</sub> - L<sub>2</sub>
+4. **complement**, e.g. L' (or /bar{L})
+5. **contatenation**, e.g. L<sub>1</sub> · L<sub>2</sub> = {x · y | x ∈ L<sub>1</sub>, y ∈ L<sub>2</sub>}
+- Note that L · ∅ = ∅ · L = ∅ ∀ L.
+- Not that L<sup>0</sup> = {ε} ∀ L.
+- Note that ∅<sup>0</sup> = {ε}.
+5. **Kleene star (L\*)** = L<sup>0</sup> ⋃ L<sup>1</sup> ⋃ L<sup>2</sup> ⋃ ... = {ε} ⋃ L ⋃ L·L ⋃ ...
+
 **Positive closure of L** = **L<sup>+</sup>** = L<sup>1</sup> ⋃ L<sup>2</sup> ⋃ ...
 - Note that L<sup>+</sup> ⋃ {ε} = L*.
 
@@ -40,6 +51,5 @@ all strings of length k over Σ.Thus, Σ* is the set of all possible alphabet en
 
 Homework #1 due September 5:
 12, 20, 37 (pg. 14-16)
-
 
 
