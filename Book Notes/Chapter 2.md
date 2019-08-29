@@ -72,4 +72,4 @@ finite accepter _M_ such that _L = L(M)_.
 
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-5.png)
 
-# 2.2 | Nondeterministic Finite Accepters
+## 2.2 | Nondeterministic Finite Accepters
