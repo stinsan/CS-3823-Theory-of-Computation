@@ -43,6 +43,33 @@ the **initial vertex**, while those labeled with _q<sub>f</sub> ∈ F_ are the *
 
 ### Languages and Deterministic Finite Accepters
 **Language**: the language accepted by a dfa _M = (Q, Σ, δ, q<sub>0</sub>, F)_ is the set of all strings
-on _Σ_ accepted by _M_.In formal notation, 
+on _Σ_ accepted by _M_. 
 
-_L(M) = {w ∈ Σ∗ : δ∗ (q<sub>0</sub>, w) ∈ F}_.
+In formal notation, 
+
+_L(M) = {w ∈ Σ* : δ* (q<sub>0</sub>, w) ∈ F}_.
+
+From this, we can define non-acceptance as
+
+_L'(M) = {w ∈ Σ*: δ* (q<sub>0</sub>, w) ∉ F}_
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-1.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-2.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-3.png)
+
+### Regular Languages
+
+Every finite automaton accepts some language. If we consider all possible
+finite automata, we get a set of languages associated with them. We will call
+such a set of languages a **family**.
+
+A language _L_ is called **regular** if and only if there exists some deterministic
+finite accepter _M_ such that _L = L(M)_.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-4.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-5.png)
+
+# 2.2 | Nondeterministic Finite Accepters
