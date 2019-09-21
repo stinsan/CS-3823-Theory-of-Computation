@@ -73,3 +73,17 @@ finite accepter _M_ such that _L = L(M)_.
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-5.png)
 
 ## 2.2 | Nondeterministic Finite Accepters
+### Definition of a Nondeterministic Accepter
+
+A **nondeterministic finite accepter (NFA)** is defined by the quintuple
+
+_M = (Q, Σ, δ, q<sub>0</sub>, F)_,
+
+where _Q, Σ, q<sub>0</sub>, F_ are defined as for DFAs, but
+
+_δ : Q × (Σ ∪ {λ}) → 2<sup>Q</sup>_.
+
+**Three major differences between NFAs and DFAs**:
+1. If, for instance, the current state is _q<sub>1</sub>_, the symbol _a_ is read, and _δ (q<sub>1</sub>, a) = {q<sub>0</sub>, q<sub>2</sub>}_ , then either _q<sub>0</sub>_ or _q<sub>2</sub>_ could be the next state of the NFA.
+2. We allow _λ_ as the second argument of _δ_. This means that the nfa can make a transition without consuming an input symbol. Although we still assume that the input mechanism can only travel to the right, it is possible that it is stationary on some moves.
+3. Finally, the set _δ (q<sub>i</sub> , a)_ may be empty, meaning that there is no transition defined for this specific situation.
