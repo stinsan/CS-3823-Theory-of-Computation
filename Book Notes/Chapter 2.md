@@ -26,7 +26,7 @@ Otherwise the string is rejected.
 
 For example, if
 
-_δ (q<sub>0</sub>, a) = q1,_
+_δ (q<sub>0</sub>, a) = q<sub>1</sub>,_
 
 then if the dfa is in state _q<sub>0</sub>_ and the current input symbol is _a_, the dfa will go into state _q<sub>1</sub>_.
 
@@ -87,3 +87,13 @@ _δ : Q × (Σ ∪ {λ}) → 2<sup>Q</sup>_.
 1. If, for instance, the current state is _q<sub>1</sub>_, the symbol _a_ is read, and _δ (q<sub>1</sub>, a) = {q<sub>0</sub>, q<sub>2</sub>}_ , then either _q<sub>0</sub>_ or _q<sub>2</sub>_ could be the next state of the NFA.
 2. We allow _λ_ as the second argument of _δ_. This means that the nfa can make a transition without consuming an input symbol. Although we still assume that the input mechanism can only travel to the right, it is possible that it is stationary on some moves.
 3. Finally, the set _δ (q<sub>i</sub> , a)_ may be empty, meaning that there is no transition defined for this specific situation.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-6.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-7.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-8.png)
+
+For an NFA, the **extended transition function** is defined so that _δ* (q<sub>i</sub> , w)_
+contains _q<sub>j</sub>_ if and only if there is a walk in the transition graph from _q<sub>i</sub>_ to
+_q<sub>j</sub>_ labeled _w_. This holds for all _q<sub>i</sub>_ , _q<sub>j</sub> ∈ Q_, and _w ∈ Σ*_. 
