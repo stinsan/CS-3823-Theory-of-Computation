@@ -97,3 +97,17 @@ _δ : Q × (Σ ∪ {λ}) → 2<sup>Q</sup>_.
 For an NFA, the **extended transition function** is defined so that _δ* (q<sub>i</sub> , w)_
 contains _q<sub>j</sub>_ if and only if there is a walk in the transition graph from _q<sub>i</sub>_ to
 _q<sub>j</sub>_ labeled _w_. This holds for all _q<sub>i</sub>_ , _q<sub>j</sub> ∈ Q_, and _w ∈ Σ*_. 
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-9.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-10.png)
+
+The language _L_ accepted by an NFA _M = (Q, Σ, δ, q<sub>0</sub> , F)_ is defined as the
+set of all strings accepted in the above sense. Formally,
+
+_L(M) = {w ∈ Σ* : δ* (q<sub>0</sub> , w) ∩ F = ∅}_.
+
+In words, the language consists of all strings _w_ for which there is a walk
+labeled _w_ from the initial vertex of the transition graph to some final vertex.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-11.png)
