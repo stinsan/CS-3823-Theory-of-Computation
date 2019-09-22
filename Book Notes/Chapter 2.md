@@ -111,3 +111,19 @@ In words, the language consists of all strings _w_ for which there is a walk
 labeled _w_ from the initial vertex of the transition graph to some final vertex.
 
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-11.png)
+
+## 2.3 | Equivalence of Deterministic and Nondeterministic Finite Accepters
+
+Two finite accepters, M<sub>1</sub> and M<sub>2</sub>, are said to be **equivalent** if
+
+_L(M<sub>1</sub>) = L(M<sub>2</sub>)_
+
+that is, if they both accept the same language.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-12.png)
+
+For every DFA, there is an equivalent NFA. For every NFA, there is an equivalent DFA.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-13.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-14.png)
