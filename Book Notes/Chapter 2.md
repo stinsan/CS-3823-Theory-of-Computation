@@ -127,3 +127,17 @@ For every DFA, there is an equivalent NFA. For every NFA, there is an equivalent
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-13.png)
 
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-14.png)
+
+**Procedure to Convert NFA to DFA**:
+1. Create a graph _G<sub>D</sub>_ with vertex {_q0_}. Identify this vertex as the initial vertex. <br/>
+2. Repeat the following steps until no more edges are missing. <br/>
+Take any vertex {_qi, qj, ..., qk}_ of _G<sub>D</sub>_ that has no outgoing edge for some _a_ ∈ _Σ_. <br/>
+Compute δ*<sub>N</sub> (_qi, a_),  δ*<sub>N</sub> (_qj, a_), ...,  δ*<sub>N</sub> (_qk, a_). <br/>
+If <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; δ*<sub>N</sub> (_qi, a_) ∪ δ*<sub>N</sub> (_qj, a_) ∪ ... ∪ δ*<sub>N</sub> (_qk, a_) = {_ql, qm, ..., qn_},<br/>
+create a vertex for _G<sub>D</sub>_ labeled {_ql, qm, ..., qn_} if it does not already exist. <br/>
+Add _G<sub>D</sub>_ an edge from {_qi, qj, ..., qk_} to {_ql, qm, ..., qn_} and label it with _a_.<br/>
+3. Every state of _G<sub>D</sub>_ whose label contains any _qf_ ∈ _F<sub>N</sub>_ is identified as a
+final vertex.<br/>
+4. If _M<sub>N</sub>_ accepts λ, the vertex {_q0_} in _G<sub>D</sub>_ is also made a final vertex.
+
