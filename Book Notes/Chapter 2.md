@@ -141,3 +141,7 @@ Add _G<sub>D</sub>_ an edge from {_qi, qj, ..., qk_} to {_ql, qm, ..., qn_} and 
 final vertex.<br/>
 4. If _M<sub>N</sub>_ accepts λ, the vertex {_q0_} in _G<sub>D</sub>_ is also made a final vertex.
 
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-15.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-16.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-17.png)
+
