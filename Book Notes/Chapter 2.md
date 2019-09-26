@@ -128,7 +128,7 @@ For every DFA, there is an equivalent NFA. For every NFA, there is an equivalent
 
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-14.png)
 
-**Procedure to Convert NFA to DFA**:
+**Procedure to Convert NFA to DFA (Theorem 2.2)**:
 1. Create a graph _G<sub>D</sub>_ with vertex {_q0_}. Identify this vertex as the initial vertex. <br/>
 2. Repeat the following steps until no more edges are missing. <br/>
 Take any vertex {_qi, qj, ..., qk}_ of _G<sub>D</sub>_ that has no outgoing edge for some _a_ ∈ _Σ_. <br/>
