@@ -145,3 +145,46 @@ final vertex.<br/>
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-16.png)
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-17.png)
 
+## 2.4 | Reduction of the Number of States in Finite Automata
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-18.png)
+
+Two states _p_ and _q_ of a DFA are called **indistinguishable** if <br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _δ* (p, w) ∈ F_ implies _δ* (q, w) ∈ F_, and _δ* (p, w) ∉ F_ implies _δ* (q, w) ∉ F_, <br/>
+<br/>
+for all _w ∈ Σ*_. If, on the other hand, there exists some string _w ∈ Σ*_ such that<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_δ* (p, w) ∈ F_ and _δ* (q, w) ∉ F_,<br/>
+<br/>
+or vice versa, the the states _p_ and _q_ are said to be **distinguishable** by a string _w_.
+
+One method for reducing the states of a dfa is based on finding and
+combining indistinguishable states. We first describe a method for finding
+pairs of distinguishable states.
+
+**Finding Pairs of Distinguishable States**:
+1. Remove all inaccessible states. This can be done by enumerating all simpel paths of the graph of the DFA starting at the initial state. Any state not part of some path is inaccessible.
+2. Consider all pairs of states (_p, q_).  If p ∈ F and q ∉ F or vice versa, mark the pair (_p, q_) as distinguishable.
+3. Repeat the following step until no previously unmarked pairs are marked.
+For all pairs (_p, q_) and all _a ∈ Σ_, </br> compute _δ (p, a) = p<sub>a</sub>_ and _δ (q, a) = q<sub>a</sub>_.
+If the pair (_p<sub>a</sub>_, _q<sub>a</sub>_) is marked as distinguishable, mark (_p, q_) as distinguishable.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-19.png)
+
+Once the indistinguishability classes are found, the construction of the
+minimal dfa is straightforward.
+
+**Construction of the Minimal DFA**:
+
+Given a DFA _M = (Q, Σ, δ, q<sub>0</sub>, F)_, we construct a reduced DFA _M' = (Q', Σ, δ', q<sub>0</sub>', F')_
+as follows.
+
+1. Find pairs of distinguishable states to generate the equivalence classes, say {_q<sub>i</sub>, q<sub>j</sub> , ..., q<sub>k</sub>_},
+as described.
+2. For each set {_q<sub>i</sub>, q<sub>j</sub> , ..., q<sub>k</sub>_} of such indistinguishable states, create a state
+labeled _ij...k_ for _M'_.
+3. For each transition rule of _M_ of the form _δ (q<sub>r</sub>, a) = q<sub>p</sub>_, find the sets to which _q<sub>r</sub>_ and _q<sub>p</sub>_ belong. If If _q<sub>r</sub> ∈ {q<sub>i</sub>, q<sub>j</sub> , ..., q<sub>k</sub>}_ and _q<sub>p</sub> ∈ {q<sub>l</sub>, q<sub>m</sub> , ..., q<sub>n</sub>}_, add to δ' a rule _δ'(ij...k, a) = lm...n_.
+4. The initial state _q<sub>0</sub>'_ is that state of _M'_ whose label includes the 0.
+5. _F'_ is the set of all the states whose label contains _i_ such that _q<sub>i</sub> ∈ F_.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-20.png)
