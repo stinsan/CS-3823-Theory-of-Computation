@@ -44,8 +44,27 @@ The last example introduces the notion of equivalence of regular expressions. We
 
 ## 3.2 | Connection Between Regular Expressions and Regular Languages
 ### Regular Expressions Denote Regular Languages
-We now show that if we have any regular expression _r-, we can construct an nfa that accepts _L(r)_. The construction
-for this relies on the recursive definition for _L(r)_ in the previous section.
+We now show that if we have any regular expression _r_, we can construct an nfa that accepts _L(r)_. The construction
+for this relies on the recursive definition for _L(r)_ in the previous section. The figures below show an nfa for all 7 rules of the defintion for _L(r)_:
 
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-28.png)
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-29.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-30.png)
+
+### Regular Expressions for Regular Languages
+A **generalized transition graph (GTG)** is a transition graph whose edges are labels with regular expressions. The label of any walk from the intial state to the final state is a concatenation of several regular expressions, and is thus a regular expression itself. The strings denoted by such regular expressions are a subset of the language accepted by the generalized transition graph, with the full
+language being the union of all such generated subsets.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-31.png)
+
+Equivalence for generalized transition graphs is defined in terms of the
+language accepted and the purpose of the next bit of discussion is to produce
+a sequence of increasingly simple GTGs. In this, we will find it convenient to work with complete GTGs.
+A complete GTG is a graph in which all edges are present. If a GTG, after conversion from an NFA, has some edges
+missing, we put them in and label them with ∅. A complete GTG with _|V |_
+vertices has exactly _|V |<sup>2</sup>_ edges.
+When a GTG has more than two states, we can find an equivalent graph
+by removing one state at a time until two states are left.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-32.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-33.png)
