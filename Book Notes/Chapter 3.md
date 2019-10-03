@@ -40,3 +40,4 @@ precedes union. Also, the symbol for concatenation may be omitted, so we can wri
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-26.png)
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-27.png)
 
+The last example introduces the notion of equivalence of regular expressions. We say the two regular expressions are **equivalent** if they denote the same language.
