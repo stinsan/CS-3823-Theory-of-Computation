@@ -41,3 +41,11 @@ precedes union. Also, the symbol for concatenation may be omitted, so we can wri
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-27.png)
 
 The last example introduces the notion of equivalence of regular expressions. We say the two regular expressions are **equivalent** if they denote the same language.
+
+## 3.2 | Connection Between Regular Expressions and Regular Languages
+### Regular Expressions Denote Regular Languages
+We now show that if we have any regular expression _r-, we can construct an nfa that accepts _L(r)_. The construction
+for this relies on the recursive definition for _L(r)_ in the previous section.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-28.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-29.png)
