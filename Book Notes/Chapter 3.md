@@ -68,3 +68,9 @@ by removing one state at a time until two states are left.
 
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-32.png)
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-33.png)
+
+These are the formal steps for turning a DFA to a regular expression (REX):
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-34.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-35.png)
+
