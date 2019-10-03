@@ -16,3 +16,27 @@ Let Σ be a given alphabet. Then
 
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-21.png)
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-22.png)
+
+### Languages Associated with Regular Expressions
+Regular expressions can be used to describe some simple languages. If _r_ is a regular expression, we will let _L(r)_ denote the language
+associated with _r_.
+
+The language _L(r)_ denoted by any regular expression _r_ is defined by the following rules:
+1. ∅ is a regular expression denoting the empty set.
+2. λ is a regular expression denoting {λ}.
+3. For every _a_ ∈ Σ, _a_ is a regular expression denoting {_a_}.
+4. _L(r1 + r2)_ = _L(r1)_ ∪ _L(r2)_
+5. _L(r1 · r2)_ = _L(r1)L(r2)_
+6. _L((r1))_ = _L(r1)_
+7. _L(r1*)_ = _(L(r1))*_
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-23.png)
+
+We establish a set of precedence rules for evaluation in which star-closure precedes concatenation and concatenation
+precedes union. Also, the symbol for concatenation may be omitted, so we can write _r1r2_ for _r1 · r2_.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-24.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-25.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-26.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-27.png)
+
