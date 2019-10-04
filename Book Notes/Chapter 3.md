@@ -77,3 +77,11 @@ These are the formal steps for turning a DFA to a regular expression (REX):
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-36.png)
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-37.png)
 
+### Regular Expressions for Describing Simple Patterns
+
+The relation between finite automata and regular expressions means that we can
+also use regular expressions as a way of describing simple constituents of programming languages, such as identifiers, integers,
+and real numbers.  
+- For example, in many programming languages the set of integer constants is defined by the regular expression _sdd*_, where _s_ stands for the sign, with possible values from {+, −, λ}, and _d_ stands for the digits 0 to 9.
+
+## 3.3 | Regular Grammars
