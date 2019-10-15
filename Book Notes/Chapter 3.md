@@ -85,3 +85,24 @@ and real numbers.
 - For example, in many programming languages the set of integer constants is defined by the regular expression _sdd*_, where _s_ stands for the sign, with possible values from {+, −, λ}, and _d_ stands for the digits 0 to 9.
 
 ## 3.3 | Regular Grammars
+A third way of describing regular languages is by means of certain grammars.
+
+### Right-Linear and Left-Linear Grammars
+A grammar _G = (V, T, S, P)_ is said to be **right-linear** if all productions are of the form
+
+_A → xB_,<br/>
+_A → x_,
+
+where _A, B_ ∈ _V_ , and _X_ ∈ _T*_. 
+
+A grammar is **left-linear** if all productions are of the form
+
+_A → Bx_,<br/>
+_A → x_.
+
+A **regular grammar** is one that is either left or right-linear.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-38.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-39.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-40.png)
