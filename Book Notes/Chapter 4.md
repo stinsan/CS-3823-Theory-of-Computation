@@ -9,3 +9,16 @@ If _L<sub>1</sub>_ and _L<sub>2</sub>_ are regular languages, then so are _L<sub
 intersection, concatenation, complementation, and star-closure.
 
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-43.png)
+
+The family of regular languages is closed under reversal. (reversing the direction of all edges)
+
+### Closure Under Other Operations
+
+Suppose _Σ_ and _Γ_ are alphabets. Then a function _h : Σ → Γ∗_ is called a **homomorphism**. In words, a homomorphism is a substitution
+in which a single letter is replaced with a string.
+
+The domain of the function _h_ is extended to strings; if _w = a<sub>1</sub> a<sub>2</sub> ··· a<sub>n</sub>_ ,
+then _h (w) = h (a<sub>1</sub>) h (a<sub>2</sub>)··· h (a<sub>n</sub>)_. 
+
+If _L_ is a language on _Σ_, then its **homomorphic image** is defined as
+_h (L) = {h (w) : w ∈ L}_.
