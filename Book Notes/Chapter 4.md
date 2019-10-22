@@ -41,3 +41,44 @@ that have a suffix belonging to _L2_.
 
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-46.png)
 ![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-47.png)
+
+If _L1_ and _L2_ are regular languages, then _L1/L2_ is also regular. We say that
+the family of regular languages is closed under right quotient with a regular
+language.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-48.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-49.png)
+
+## 4.2 | Elementary Questions about Regular Languages
+Given a language _L_ and a string _w_, can we determine whether or not _w_ is an element of _L_? This is the
+**membership question** and a method for answering it is called a membership algorithm.
+
+A regular language is given in a **standard representation** if and only if it is described by a finite automaton,
+a regular expression, or a regular grammar. These are the only representations that are useful in theorems.
+
+### Theorem 4.5
+Given a standard representation of any regular language _L_ on _Σ_ and any
+_w ∈ Σ∗_, there exists an algorithm for determining whether or not _w_ is in _L_.
+
+**Proof**: Construct a DFA for _L_, and see whether or not _w_ is accepted.
+
+### Theorem 4.6
+There exists an algorithm for determining whether a regular language _L_, given
+in standard representation, is empty, finite, or infinite.
+
+**Proof**: Construct a DFA for _L_. If there is a path from the initial state to a final state, then the language is not empty.
+To determine whether or not a language is infinite, find all the vertices
+that are the base of some cycle. If any of these are on a path from an initial
+to a final vertex, the language is infinite. Otherwise, it is finite.
+
+### Theorem 4.7
+Given standard representations of two regular languages _L1_ and _L2_, there
+exists an algorithm to determine whether or not _L1 = L2_.
+
+**Proof**: We define the language _L3 = (L1 ∩ L2') ∪ (L1' ∩ L2)_.
+By closure, _L3_is regular, and we can find a DFA _M_ that accepts _L3_. Once
+we have _M_, we can then use the algorithm in Theorem 4.6 to determine if
+_L3_ is empty. We see that _L3 = ∅_ if and only if _L1 = L2_ (exercise 8, section 1.1).
+
+## 4.3 | Identifying Nonregular Languages
+### Using the Pigeonhole Principle
