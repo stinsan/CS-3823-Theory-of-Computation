@@ -22,3 +22,5 @@ then _h (w) = h (a<sub>1</sub>) h (a<sub>2</sub>)··· h (a<sub>n</sub>)_.
 
 If _L_ is a language on _Σ_, then its **homomorphic image** is defined as
 _h (L) = {h (w) : w ∈ L}_.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-44.png)
