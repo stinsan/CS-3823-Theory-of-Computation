@@ -82,3 +82,76 @@ _L3_ is empty. We see that _L3 = ∅_ if and only if _L1 = L2_ (exercise 8, sect
 
 ## 4.3 | Identifying Nonregular Languages
 ### Using the Pigeonhole Principle
+**Pigeonhole Principle**: If we put _n_ objects into _m_ boxes, and if _n > m_, then at least one box must have more than one item in it.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-50.png)
+
+To explain the above example, to accept all _a<sup>n</sup>b<sup>n</sup>_, an automaton would have to differentiate between all prefixes _a<sup>n</sup>_ and _a<sup>m</sup>_ . But since there are only a finite number of
+internal states with which to do this, there are some _n_ and _m_ for which the
+distinction cannot be made.
+
+Here is what we know about transition graphs for regular languages:
+- If the transition graph has no cycles, the language is finite and therefore
+regular.
+
+- If the transition graph has a cycle with a nonempty label, the language
+is infinite. Conversely, every infinite regular language has a DFA with
+such a cycle.
+
+- If there is a cycle, this cycle can either be skipped or repeated an arbitrary number of times. So, if the cycle has label _v_ and if the string _w<sub>1</sub> v w<sub>2</sub>_ is in the language, so must be the strings _w<sub>1</sub> w<sub>2</sub>_ , _w<sub>1</sub> v v w<sub>2</sub>_ ,_w<sub>1</sub> v v v w<sub>2</sub>_ , and so on.
+
+- We do not know where in the DFA this cycle is, but if the dfa has _m_
+states, the cycle must be entered by the time _m_ symbols have been
+read.
+
+If, for some language L, there is even one string w that does not have
+this property, L cannot be regular. This observation can be formally stated
+as a theorem called **pumping lemma**.
+
+Finite languages, although always regular, cannot be pumped since pumping automatically creates an infinite set. The theorem does hold for finite languages, but it is vacuous. 
+
+### A Pumping Lemma
+**Theorem 4.8**:
+Let _L_ be an infinite regular language. Then there exists some positive integer _m_ such that any _w ∈ L_ with <br/> _|w| ≥ m_ can be decomposed as _w = xyz_ with _|xy| ≤ m_, and _|y| ≥ 1_, such that _w<sub>i</sub> = x y<sup>i</sup> z_, is also in _L_ for all _i_ = 0, 1, 2, ....
+
+To paraphrase this, every sufficiently long string in _L_ can be broken
+into three parts in such a way that an arbitrary number of repetitions of
+the middle part yields another string in L. We say that the middle string
+is “pumped,” hence the term pumping lemma for this result.
+
+**Equation 4.2**: _w<sub>i</sub> = x y<sup>i</sup> z_ (from Theorem 4.8)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-51.png)
+
+The correct argument when applying the pumping lemma can be visualized as a game we play against an
+opponent. Our goal is to win the game by establishing a contradiction of
+the pumping lemma, while the opponent tries to foil us. There are four
+moves in the game.
+
+1. The opponent picks _m_.
+
+2. Given _m_, we pick a string _w_ in _L_ of length equal or greater than _m_.
+We are free to choose any _w_, subject to _w ∈ L_ and _|w| ≥ m_.
+
+3. The opponent chooses the decomposition _xyz_, subject to _|xy| ≤ m_, _|y| ≥
+1_. We have to assume that the opponent makes the choice that will make
+it hardest for us to win the game.
+
+4. We try to pick _i_ in such a way that the pumped string _w<sub>i</sub>_ , defined in
+Equation 4.2, is not in _L_. If we can do so, we win the game.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-52.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-53.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-54.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-55.png)
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-56.png)
+
+In some cases, closure properties can be used to relate a given problem to
+one we have already classified. This may be simpler than a direct application
+of the pumping lemma.
+
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-57.png)
+![](https://github.com/stinsan/CS-3823-Theory-of-Computation/blob/master/Screenshots/toc-58.png)
